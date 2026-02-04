@@ -1,0 +1,12 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: Akki-8989/Infrastructure/.github/workflows/deploy-be-test-api.yml@main
+    with:
+      repo_name: be-test-api
+      infra_repo: Infrastructure
+    secrets: inherit
